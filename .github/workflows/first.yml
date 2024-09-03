@@ -1,0 +1,12 @@
+name: First Workflow
+on: push
+jobs:
+    first_job:
+        name: This is the first Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Try Echo
+              run: echo "Welcome to my first job"
+
+            - name: Print the path
+              run: pwd

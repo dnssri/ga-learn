@@ -2,7 +2,7 @@ name: First Workflow
 on: push
 jobs:
     first_job:
-        name: This is the first Job
+        name: first job
         runs-on: ubuntu-latest
         steps:
             - name: Try Echo
@@ -10,3 +10,9 @@ jobs:
 
             - name: Print the path
               run: pwd
+
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Print Content of Readme file
+              run: cat README.md

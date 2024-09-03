@@ -45,3 +45,6 @@ jobs:
               with:
                 name: myfile
                 path: ./myfile.txt
+
+            - name: Printing File Content
+              run: cat ./myfile.txt

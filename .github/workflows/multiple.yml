@@ -24,4 +24,9 @@ jobs:
         needs: [job-1, job-2]
         steps:
             - name: Generating Dependencies
-              run: "This is ran after job-1 and job-2 are finished"                    
+              run: echo "This is ran after job-1 and job-2 are finished" 
+            
+            - name: Value From Settings
+              run: |
+                echo "Secret Value is ${{ secrets.MY_SECRET}}"
+                echo "Variable is ${{ vars.MY_VAR}}"
